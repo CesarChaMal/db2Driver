@@ -1,0 +1,6 @@
+mvn install:install-file -Dfile="C:\IdeaProjects\db2Driver\lib\db2jcc-db2jcc4.jar" -DgroupId=com.ibm.db2.jcc -DartifactId=db2jcc -Dversion=11.1.4.4 -Dpackaging=jar
+mvn deploy:deploy-file -Dfile="C:\IdeaProjects\db2Driver\lib\db2jcc-db2jcc4.jar" -DgroupId=com.ibm.db2.jcc -DartifactId=db2jcc -Dversion=11.1.4.4 -Dpackaging=jar -DgeneratePom=true -DrepositoryId=nexus -Durl=http://localhost:8081/repository/maven-releases/
+mvn deploy:deploy-file -Dfile="C:\IdeaProjects\db2Driver\lib\db2jcc-db2jcc4.jar" -DgroupId=com.ibm.db2.jcc -DartifactId=db2jcc -Dversion=11.1.4.4-SNAPSHOT -Dpackaging=jar -DgeneratePom=true -DrepositoryId=nexus -Durl=http://localhost:8081/repository/maven-snapshots/
+-- -U forces update in cache
+mvn compile -U
+mvn package -U
